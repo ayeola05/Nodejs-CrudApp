@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page</title>
+  </head>
+  <body>
+    <h1>CRUD APP IMPLEMENTATION</h1>
+    <ul>
+      <% for(let detail of details){ %>
+      <h2>
+        <li>
+          <%= detail.firstname %> -
+          <a href="/show/<%= detail.id  %> ">details</a>
+        </li>
+      </h2>
+      <% } %>
+    </ul>
+
+    <form action="/create" method="GET">
+      <button>Add Profile</button>
+    </form>
+
+    <h5>© Ayeola Taiwo</h5>
+  </body>
+</html>
