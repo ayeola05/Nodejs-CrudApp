@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= detail.firstname %>'s details</title>
+  </head>
+  <body>
+    <h1>Full Name: <%= detail.firstname %> <%= detail.lastname %></h1>
+    <h2>Course: <%= detail.course %></h2>
+    <button>
+      <a
+        href="https://www.google.com/search?q=<%= detail.course  %> "
+        target="blank"
+        >Click to know what <%= detail.course %> is about</a
+      >
+    </button>
+
+    <p>
+      <button><a href="/edit/<%= detail.id %> ">Edit profile</a></button>
+    </p>
+
+    <form action="/delete/<%= detail.id %>?_method=DELETE " method="POST">
+      <button>Delete Profile</button>
+    </form>
+
+    <p>
+      <button><a href="/">Back</a></button>
+    </p>
+
+    <h5>© Ayeola Taiwo</h5>
+  </body>
+</html>
